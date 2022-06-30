@@ -1,0 +1,20 @@
+{
+  "name": "shorten-url",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start:client": "cd client && npm start",
+    "start:server": "cd server && npm start",
+    "dev:server": "cd server && npm run dev",
+    "start": "concurrently \"npm run dev:server\" \"npm run start:client\"",
+    "heroku-postbuild": "cd server && npm install && cd ../client && npm install && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.2.2"
+  }
+}
